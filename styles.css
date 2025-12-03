@@ -898,7 +898,6 @@ body {
 
   .hero-content {
     gap: 32px;
-    grid-template-columns: 1fr;
   }
 
   .hero-text h1 {
@@ -1126,3 +1125,42 @@ body {
     font-size: 0.85rem;
   }
 }
+:root {
+  --primary-black: #0a0a0a;
+  --secondary-black: #1a1a1a;
+  --accent-yellow: #ffd700;
+  --text-white: #ffffff;
+  --text-gray: #cccccc;
+  --card-bg: #252525;
+  --font-main: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--primary-black);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+/* Urgency Bar */
+.urgency-bar {
+  background-color: var(--accent-yellow);
+  color: var(--primary-black);
+  text-align: center;
+  padding: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Navigation */
