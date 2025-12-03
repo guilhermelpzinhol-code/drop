@@ -151,7 +151,7 @@ body {
 }
 .hero-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
 }
 .hero-image img {
@@ -788,6 +788,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
