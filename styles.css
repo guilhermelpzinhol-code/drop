@@ -267,57 +267,129 @@ body {
 
 /* Three System Section */
 .three-system-section {
-  padding: 80px 20px;
-  background-color: var(--secondary-black);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.three-system-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .three-system-section h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 60px;
-  color: var(--text-white);
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 70px;
+  color: #1a1a1a;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .three-system-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .system-card {
-  background: transparent;
-  padding: 35px 25px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 45px 35px;
   text-align: center;
-  border-bottom: 2px solid var(--accent-yellow);
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.system-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.system-card:hover::before {
+  transform: translateX(100%);
 }
 
 .system-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .system-number {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--accent-yellow);
-  margin-bottom: 15px;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
 }
 
 .system-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: var(--text-white);
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
 .system-card p {
-  color: var(--text-gray);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .three-system-section {
+    padding: 60px 20px;
+  }
+  
+  .three-system-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .three-system-grid {
+    gap: 25px;
+  }
+  
+  .system-card {
+    padding: 35px 25px;
+  }
+  
+  .system-number {
+    font-size: 3rem;
+  }
+}
 /* Why Section */
 .why-section {
   padding: 80px 20px;
@@ -854,6 +926,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
