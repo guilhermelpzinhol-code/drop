@@ -138,6 +138,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline;
 }
 .hero-sub {
   font-size: 1.1rem;
@@ -773,6 +774,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
