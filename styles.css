@@ -470,6 +470,27 @@ body {
   filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.6));
 }
 
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-white);
+}
+
+.benefit-item p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 @keyframes iconGlow {
   0%, 100% {
     filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.4));
@@ -479,6 +500,11 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .benefits-grid {
+    gap: 35px;
+  }
+}
 /* Trust Section */
 .trust-section {
   padding: 80px 20px;
@@ -926,6 +952,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
