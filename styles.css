@@ -81,14 +81,16 @@ body {
 }
 
 .cta-button.small {
-  padding: 8px 16px;
-  font-size: 0.7rem;
+  padding: 8px 14px;
+  font-size: 0.65rem;
 }
 
+/* Reduced padding and font-size for mobile */
 .cta-button.large {
-  padding: 14px 28px;
-  font-size: 0.9rem;
+  padding: 12px 24px;
+  font-size: 0.85rem;
   width: 100%;
+  max-width: 400px;
   margin-top: 16px;
 }
 
@@ -207,8 +209,10 @@ body {
 .hero-product-image {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .hero-product-image img {
@@ -216,6 +220,42 @@ body {
   height: auto;
   max-height: 400px;
   object-fit: contain;
+}
+
+/* Added 3-in-1 label section below product */
+.three-in-one-label {
+  width: 100%;
+  text-align: center;
+  color: var(--text-white);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.three-in-one-label h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-white);
+  letter-spacing: -0.5px;
+}
+
+.trio-functions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.function-item {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  background: rgba(255, 215, 0, 0.05);
 }
 
 /* Container */
@@ -226,176 +266,118 @@ body {
   text-align: center;
 }
 
-/* Solution Section - 3 in 1 */
-.solution-section {
+/* New Why Section - Storytelling approach -->
+.why-section {
   padding: 60px 20px;
   background-color: var(--secondary-black);
-}
-
-.solution-section h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-.three-in-one {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.trio-card {
-  background-color: var(--card-bg);
-  padding: 30px 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  transition: all 0.3s ease;
   text-align: center;
 }
 
-.trio-card:hover {
-  border-color: var(--accent-yellow);
-  transform: translateY(-8px);
-}
-
-.trio-number {
-  font-size: 2.5rem;
+.why-content h2 {
+  font-size: 2.2rem;
   font-weight: 800;
-  color: var(--accent-yellow);
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  color: var(--text-white);
 }
 
-.trio-card h3 {
+.why-content p {
   font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.trio-card p {
   color: var(--text-gray);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* Benefits Section */
-.benefits-section {
+/* New Advantages Section - Minimal design, only 4 cards -->
+.advantages-section {
   padding: 60px 20px;
   background-color: var(--primary-black);
 }
 
-.benefits-section h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-.benefits-grid {
+.advantages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.benefit-card {
-  background-color: var(--card-bg);
+.advantage-card {
+  background: transparent;
   padding: 30px 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  transition: all 0.3s ease;
   text-align: center;
+  border: none;
 }
 
-.benefit-card:hover {
-  border-color: var(--accent-yellow);
-  transform: translateY(-8px);
-}
-
-.benefit-card h3 {
+.advantage-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: var(--text-white);
 }
 
-.benefit-card p {
+.advantage-card p {
   color: var(--text-gray);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* Social Proof Section */
-.social-proof {
-  padding: 60px 20px;
-  background-color: var(--secondary-black);
-}
-
-.social-proof h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-.reviews-carousel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.review-card {
-  background-color: var(--card-bg);
-  padding: 30px 20px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  text-align: center;
-}
-
-.stars {
-  color: var(--accent-yellow);
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
-.rating-number {
-  color: var(--accent-yellow);
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.review-card p {
-  color: var(--text-gray);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  font-style: italic;
-}
-
-.review-card cite {
-  color: var(--text-gray);
-  font-size: 0.85rem;
-  font-style: normal;
-  font-weight: 600;
-}
-
-/* Footer CTA */
-.footer-cta {
+/* New Testimonials Section - Different layout from before -->
+.testimonials-section {
   padding: 60px 20px;
   background: linear-gradient(135deg, var(--secondary-black), var(--primary-black));
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: var(--text-white);
+}
+
+.testimonial-block {
+  background: transparent;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.testimonial-block cite {
+  color: var(--accent-yellow);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* New Final CTA Section - Clean and minimal -->
+.final-cta-section {
+  padding: 60px 20px;
+  background-color: var(--secondary-black);
   text-align: center;
 }
 
-.footer-cta h2 {
+.final-cta-section h2 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 16px;
+  color: var(--text-white);
 }
 
-.footer-cta p {
+.final-cta-section p {
   color: var(--text-gray);
   font-size: 1rem;
   margin-bottom: 20px;
-}
-
-.centered-pricing {
-  justify-content: center;
 }
 
 .stock-warning {
@@ -405,30 +387,17 @@ body {
   margin-top: 16px;
 }
 
-.legal-links {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-gray);
-  font-size: 0.85rem;
-}
-
-.legal-links a {
-  color: var(--accent-yellow);
-  text-decoration: none;
-  margin: 0 8px;
-}
-
 /* FAQ Section */
 .faq-section {
   padding: 60px 20px;
-  background-color: var(--secondary-black);
+  background-color: var(--primary-black);
 }
 
 .faq-section h2 {
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 40px;
+  color: var(--text-white);
 }
 
 .accordion {
@@ -488,6 +457,25 @@ body {
   margin-top: 12px;
 }
 
+/* Footer */
+.footer {
+  background-color: var(--primary-black);
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-links {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+}
+
+.legal-links a {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
 /* Reveal Animation */
 .reveal {
   opacity: 0;
@@ -509,34 +497,43 @@ body {
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-sub {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .solution-section h2,
-  .benefits-section h2,
-  .social-proof h2,
-  .footer-cta h2,
+  .why-section,
+  .final-cta-section,
+  .faq-section {
+    padding: 40px 16px;
+  }
+
+  .why-content h2,
+  .final-cta-section h2,
   .faq-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .why-content p {
+    font-size: 1rem;
   }
 
   .new-price {
     font-size: 2rem;
   }
 
-  .pricing-display {
-    flex-direction: column;
-    gap: 8px;
+  .advantages-section {
+    padding: 40px 16px;
   }
 
-  .three-in-one,
-  .benefits-grid,
-  .reviews-carousel {
-    grid-template-columns: 1fr;
+  .testimonials-section {
+    padding: 40px 16px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.6rem;
   }
 
   .navbar {
@@ -550,6 +547,19 @@ body {
   .container {
     padding: 0 16px;
   }
+
+  .three-in-one-label h3 {
+    font-size: 1.5rem;
+  }
+
+  .trio-functions {
+    gap: 12px;
+  }
+
+  .function-item {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -558,13 +568,17 @@ body {
     font-size: 0.8rem;
   }
 
+  .hero {
+    padding: 30px 12px;
+  }
+
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.3;
   }
 
   .hero-sub {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .new-price {
@@ -575,62 +589,87 @@ body {
     font-size: 0.9rem;
   }
 
-  .solution-section h2,
-  .benefits-section h2,
-  .social-proof h2,
-  .footer-cta h2,
+  .why-section,
+  .advantages-section,
+  .testimonials-section,
+  .final-cta-section,
+  .faq-section {
+    padding: 30px 12px;
+  }
+
+  .why-content h2,
+  .final-cta-section h2,
   .faq-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
   }
 
-  .trio-card,
-  .benefit-card,
-  .review-card {
-    padding: 20px 16px;
-  }
-
-  .trio-number {
-    font-size: 2rem;
-  }
-
-  .trio-card h3,
-  .benefit-card h3 {
-    font-size: 1rem;
-  }
-
-  .trio-card p,
-  .benefit-card p {
-    font-size: 0.9rem;
-  }
-
-  .cta-button.large {
-    padding: 12px 20px;
-    font-size: 0.85rem;
-  }
-
-  .accordion-header {
+  .why-content p {
     font-size: 0.95rem;
   }
 
+  .advantage-card {
+    padding: 20px 12px;
+  }
+
+  .advantage-card h3 {
+    font-size: 1rem;
+  }
+
+  .advantage-card p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-block cite {
+    font-size: 0.85rem;
+  }
+
+  .cta-button.large {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .accordion-header {
+    font-size: 0.9rem;
+  }
+
   .accordion-header::after {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .container {
     padding: 0 12px;
   }
 
-  .hero {
-    padding: 30px 12px;
+  .three-in-one-label {
+    padding: 16px;
   }
 
-  .solution-section,
-  .benefits-section,
-  .social-proof,
-  .footer-cta,
-  .faq-section {
-    padding: 40px 12px;
+  .three-in-one-label h3 {
+    font-size: 1.2rem;
+  }
+
+  .trio-functions {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .function-item {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .final-cta-section p {
+    font-size: 0.95rem;
   }
 }
 
