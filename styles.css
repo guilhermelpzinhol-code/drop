@@ -413,11 +413,11 @@ body {
 }
 .rating-number {
   font-size: 1.4rem;
-  color: var(--primary-black);
+  color: var(--text-white);
 }
 .rating-max {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   margin-left: 2px;
 }
 .stars {
@@ -818,6 +818,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
