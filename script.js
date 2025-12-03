@@ -1,60 +1,155 @@
-// Script para o contador de urgência dinâmico
-function updateStockCount(count) {
-    const stockCountElement = document.getElementById('stock-count');
-    if (stockCountElement) {
-        stockCountElement.textContent = count;
+// Stock countdown animation
+function updateStockCount() {
+  const counts = [12, 10, 8, 5, 3, 2, 1]
+  let currentIndex = 0
+
+  setInterval(() => {
+    const stockElement = document.querySelector(".stock-count")
+    if (stockElement) {
+      currentIndex = (currentIndex + 1) % counts.length
+      stockElement.textContent = counts[currentIndex]
     }
+  }, 20000)
 }
 
-// Inicia o contador em 16
-window.addEventListener('load', () => {
-    setTimeout(() => updateStockCount(14), 15000); // 15 segundos -> 14
-    setTimeout(() => updateStockCount(13), 25000); // 25 segundos -> 13
-    setTimeout(() => updateStockCount(7), 60000);  // 60 segundos -> 7
-});
+// Scroll reveal animation with performance optimization
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal, .showcase-item")
 
-// Script para o efeito de Scroll-Reveal
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+  function checkReveal() {
+    reveals.forEach((element) => {
+      const windowHeight = window.innerHeight
+      const elementTop = element.getBoundingClientRect().top
+      const elementVisible = 150
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        element.classList.add("active")
+      }
+    })
+  }
 
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
+  let ticking = false
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        checkReveal()
+        ticking = false
+      })
+      ticking = true
+    }
+  })
+
+  checkReveal() // Check on load
+}
+
+// FAQ Accordion with smooth animation
+function initFAQ() {
+  const faqHeaders = document.querySelectorAll(".faq-header")
+
+  faqHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const faqItem = header.parentElement
+      const content = faqItem.querySelector(".faq-content")
+      const isOpen = header.classList.contains("active")
+
+      document.querySelectorAll(".faq-header").forEach((h) => {
+        if (h !== header) {
+          h.classList.remove("active")
+          const otherContent = h.parentElement.querySelector(".faq-content")
+          otherContent.classList.remove("open")
         }
-    }
+      })
+
+      // Toggle current item
+      header.classList.toggle("active")
+      content.classList.toggle("open")
+    })
+  })
 }
 
-window.addEventListener("scroll", reveal);
-// Para revelar elementos que já estão na tela no carregamento
-reveal(); 
+// Smooth scroll for anchor links with polished behavior
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href")
+      if (href !== "#" && document.querySelector(href)) {
+        e.preventDefault()
+        const target = document.querySelector(href)
+        const offsetTop = target.offsetTop - 80 // Account for fixed navbar
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        })
+      }
+    })
+  })
+}
 
-// Script do Acordeão (FAQ)
-document.addEventListener('DOMContentLoaded', function() {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+function initNavbarScroll() {
+  const navbar = document.querySelector(".navbar")
+  let lastScroll = 0
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const currentItem = this.parentElement;
-            const content = currentItem.querySelector('.accordion-content');
-            const isActive = currentItem.classList.contains('active');
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset
 
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.accordion-content').style.maxHeight = null;
-                item.querySelector('.accordion-header').classList.remove('active');
-            });
+    if (currentScroll > 50) {
+      navbar.style.borderBottomColor = "rgba(255, 255, 255, 0.15)"
+    } else {
+      navbar.style.borderBottomColor = "rgba(255, 255, 255, 0.08)"
+    }
 
-            if (!isActive) {
-                currentItem.classList.add('active');
-                content.style.maxHeight = content.scrollHeight + "px";
-                this.classList.add('active');
-            }
-        });
-    });
-});
+    lastScroll = currentScroll
+  })
+}
+
+function initActiveSection() {
+  const sections = document.querySelectorAll("section, header")
+  const navLinks = document.querySelectorAll('a[href^="#"]')
+
+  window.addEventListener("scroll", () => {
+    let current = ""
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id")
+      }
+    })
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active")
+      if (link.getAttribute("href").slice(1) === current) {
+        link.classList.add("active")
+      }
+    })
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateStockCount()
+  revealOnScroll()
+  initFAQ()
+  initSmoothScroll()
+  initNavbarScroll()
+  initActiveSection()
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      // Page is hidden
+    } else {
+      // Page is visible - can track as re-engagement
+    }
+  })
+})
+
+window.addEventListener("resize", () => {
+  // Recalculate reveal positions on resize
+  const reveals = document.querySelectorAll(".reveal, .showcase-item")
+  reveals.forEach((el) => {
+    if (el.classList.contains("active")) {
+      el.classList.remove("active")
+    }
+  })
+  setTimeout(() => {
+    revealOnScroll()
+  }, 100)
+})
