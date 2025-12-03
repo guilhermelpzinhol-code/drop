@@ -4,7 +4,7 @@
   --accent-yellow: #ffd700;
   --text-white: #ffffff;
   --text-gray: #cccccc;
-  --card-bg: #252525;
+  --text-muted: #999999;
   --font-main: "Outfit", sans-serif;
 }
 
@@ -30,8 +30,8 @@ body {
   background-color: var(--accent-yellow);
   color: var(--primary-black);
   text-align: center;
-  padding: 8px;
-  font-weight: 800;
+  padding: 10px 20px;
+  font-weight: 700;
   font-size: 0.9rem;
   animation: slideDown 0.5s ease-out;
 }
@@ -59,39 +59,39 @@ body {
   color: var(--accent-yellow);
 }
 
-/* CTA Button Styles */
+/* CTA Buttons */
 .cta-button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 25px;
   background-color: var(--accent-yellow);
   color: var(--primary-black);
   text-decoration: none;
-  font-weight: 800;
-  font-size: 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  display: inline-block;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
 }
 
 .cta-button.small {
-  padding: 8px 14px;
-  font-size: 0.65rem;
+  padding: 8px 16px;
+  font-size: 0.75rem;
 }
 
-/* Reduced padding and font-size for mobile */
 .cta-button.large {
-  padding: 12px 24px;
-  font-size: 0.85rem;
   width: 100%;
   max-width: 400px;
-  margin-top: 16px;
+  padding: 14px 28px;
+  font-size: 0.9rem;
+  margin-top: 20px;
 }
 
 .cta-button.pulse {
@@ -110,25 +110,25 @@ body {
 
 /* Hero Section */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, var(--primary-black), var(--secondary-black));
   min-height: 100vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
-.hero-left-col {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -142,109 +142,53 @@ body {
 .hero-sub {
   font-size: 1.1rem;
   color: var(--text-gray);
-  line-height: 1.6;
-  margin-bottom: 20px;
+  line-height: 1.7;
+  margin-bottom: 30px;
 }
 
 .hero-visual {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-.hero-visual-cta {
-  width: 100%;
-  text-align: center;
-}
-
-.hero-trust-badge {
-  background-color: rgba(255, 215, 0, 0.1);
-  border: 1px solid var(--accent-yellow);
-  color: var(--accent-yellow);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-
-.pricing-display {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 16px 0;
-  flex-wrap: wrap;
-}
-
-.old-price {
-  color: var(--text-gray);
-  text-decoration: line-through;
-  font-size: 1rem;
-}
-
-.new-price {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--accent-yellow);
-}
-
-.save-badge {
-  background-color: rgba(76, 175, 80, 0.2);
-  color: #4ade80;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.guarantee {
-  font-size: 0.85rem;
-  color: var(--text-gray);
-  margin-top: 12px;
-}
-
-.hero-product-image {
+.hero-image-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-.hero-product-image img {
+.hero-image-container img {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 350px;
   object-fit: contain;
 }
 
-/* Added 3-in-1 label section below product */
 .three-in-one-label {
   width: 100%;
   text-align: center;
   color: var(--text-white);
-  padding: 20px;
+  padding: 25px 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  border: 1px solid rgba(255, 215, 0, 0.15);
 }
 
 .three-in-one-label h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 12px;
-  color: var(--text-white);
+  margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
 
 .trio-functions {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -258,6 +202,48 @@ body {
   background: rgba(255, 215, 0, 0.05);
 }
 
+.pricing-block {
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.old-price {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-size: 1.1rem;
+}
+
+.new-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+}
+
+.save-badge {
+  display: inline-block;
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4ade80;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.guarantee {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
 /* Container */
 .container {
   max-width: 1200px;
@@ -266,15 +252,67 @@ body {
   text-align: center;
 }
 
-/* New Why Section - Storytelling approach -->
-.why-section {
-  padding: 60px 20px;
+/* Three System Section */
+.three-system-section {
+  padding: 80px 20px;
   background-color: var(--secondary-black);
+}
+
+.three-system-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: var(--text-white);
+}
+
+.three-system-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.system-card {
+  background: transparent;
+  padding: 35px 25px;
   text-align: center;
+  border-bottom: 2px solid var(--accent-yellow);
+  transition: transform 0.3s ease;
+}
+
+.system-card:hover {
+  transform: translateY(-5px);
+}
+
+.system-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+  margin-bottom: 15px;
+}
+
+.system-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-white);
+}
+
+.system-card p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Why Section */
+.why-section {
+  padding: 80px 20px;
+  background-color: var(--primary-black);
 }
 
 .why-content h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 20px;
   color: var(--text-white);
@@ -288,115 +326,156 @@ body {
   margin: 0 auto;
 }
 
-/* New Advantages Section - Minimal design, only 4 cards -->
-.advantages-section {
-  padding: 60px 20px;
-  background-color: var(--primary-black);
+/* Benefits Section */
+.benefits-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--secondary-black), var(--primary-black));
 }
 
-.advantages-grid {
+.benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.advantage-card {
-  background: transparent;
-  padding: 30px 20px;
+.benefit-item {
   text-align: center;
-  border: none;
+  padding: 30px;
 }
 
-.advantage-card h3 {
-  font-size: 1.1rem;
+.benefit-title {
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--text-white);
 }
 
-.advantage-card p {
+.benefit-item p {
   color: var(--text-gray);
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* New Testimonials Section - Different layout from before -->
-.testimonials-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, var(--secondary-black), var(--primary-black));
+/* Trust Section */
+.trust-section {
+  padding: 80px 20px;
+  background-color: var(--secondary-black);
 }
 
-.testimonials-section h2 {
-  font-size: 2rem;
+.trust-section h2 {
+  font-size: 2.3rem;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: var(--text-white);
 }
 
-.testimonial-block {
-  background: transparent;
-  padding: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.testimonial-text {
-  font-size: 1.05rem;
-  color: var(--text-gray);
-  line-height: 1.8;
-  font-style: italic;
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stars {
+  color: var(--accent-yellow);
+  font-size: 0.9rem;
   margin-bottom: 12px;
 }
 
-.testimonial-block cite {
-  color: var(--accent-yellow);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 0.9rem;
+.testimonial-text {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-style: italic;
 }
 
-/* New Final CTA Section - Clean and minimal -->
+.testimonial-author {
+  color: var(--accent-yellow);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Final CTA Section */
 .final-cta-section {
-  padding: 60px 20px;
-  background-color: var(--secondary-black);
+  padding: 80px 20px;
+  background-color: var(--primary-black);
   text-align: center;
 }
 
 .final-cta-section h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   margin-bottom: 16px;
   color: var(--text-white);
 }
 
-.final-cta-section p {
+.final-cta-section > .container > p:first-of-type {
   color: var(--text-gray);
   font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.final-pricing {
+  margin-bottom: 30px;
+}
+
+.price-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.price-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   margin-bottom: 20px;
 }
 
-.stock-warning {
-  color: #ff6b6b;
-  font-size: 0.9rem;
-  font-weight: 600;
+.final-old-price {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-size: 1.2rem;
+}
+
+.final-new-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+}
+
+.final-guarantee {
+  color: var(--text-muted);
+  font-size: 0.85rem;
   margin-top: 16px;
 }
 
 /* FAQ Section */
 .faq-section {
-  padding: 60px 20px;
-  background-color: var(--primary-black);
+  padding: 80px 20px;
+  background-color: var(--secondary-black);
 }
 
 .faq-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: var(--text-white);
 }
 
@@ -408,7 +487,7 @@ body {
 
 .accordion-item {
   border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
 .accordion-header {
@@ -434,7 +513,7 @@ body {
 
 .accordion-header::after {
   content: "+";
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--accent-yellow);
   font-weight: 800;
   transition: transform 0.3s ease;
@@ -442,6 +521,7 @@ body {
 
 .accordion-header.active::after {
   content: "−";
+  transform: rotate(180deg);
 }
 
 .accordion-content {
@@ -453,6 +533,10 @@ body {
   line-height: 1.6;
 }
 
+.accordion-content.open {
+  max-height: 400px;
+}
+
 .accordion-content p {
   margin-top: 12px;
 }
@@ -460,20 +544,30 @@ body {
 /* Footer */
 .footer {
   background-color: var(--primary-black);
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.legal-links {
+.footer-content {
   color: var(--text-gray);
   font-size: 0.85rem;
+  margin-bottom: 10px;
 }
 
-.legal-links a {
+.footer-content a {
   color: var(--accent-yellow);
   text-decoration: none;
-  margin: 0 8px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-content a:hover {
+  opacity: 0.8;
+}
+
+.footer-credit {
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 /* Reveal Animation */
@@ -490,58 +584,40 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero {
+  .hero-content {
     grid-template-columns: 1fr;
-    padding: 40px 16px;
-    min-height: auto;
+    gap: 30px;
+    padding: 40px 0;
   }
 
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
   .hero-sub {
     font-size: 0.95rem;
   }
 
+  .new-price {
+    font-size: 2.2rem;
+  }
+
+  .three-system-section,
   .why-section,
+  .benefits-section,
+  .trust-section,
   .final-cta-section,
   .faq-section {
-    padding: 40px 16px;
+    padding: 60px 20px;
   }
 
+  .three-system-section h2,
   .why-content h2,
+  .trust-section h2,
   .final-cta-section h2,
   .faq-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .why-content p {
-    font-size: 1rem;
-  }
-
-  .new-price {
-    font-size: 2rem;
-  }
-
-  .advantages-section {
-    padding: 40px 16px;
-  }
-
-  .testimonials-section {
-    padding: 40px 16px;
-  }
-
-  .testimonials-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .navbar {
-    padding: 12px 16px;
-  }
-
-  .logo {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .container {
@@ -552,98 +628,52 @@ body {
     font-size: 1.5rem;
   }
 
-  .trio-functions {
-    gap: 12px;
+  .function-item {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
-  .function-item {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+  .cta-button.large {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .urgency-bar {
-    padding: 6px;
-    font-size: 0.8rem;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
   }
 
   .hero {
-    padding: 30px 12px;
+    padding: 30px 16px;
+    min-height: auto;
   }
 
   .hero-text h1 {
     font-size: 1.4rem;
-    line-height: 1.3;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
   .hero-sub {
     font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 
   .new-price {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .old-price {
     font-size: 0.9rem;
-  }
-
-  .why-section,
-  .advantages-section,
-  .testimonials-section,
-  .final-cta-section,
-  .faq-section {
-    padding: 30px 12px;
-  }
-
-  .why-content h2,
-  .final-cta-section h2,
-  .faq-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-
-  .why-content p {
-    font-size: 0.95rem;
-  }
-
-  .advantage-card {
-    padding: 20px 12px;
-  }
-
-  .advantage-card h3 {
-    font-size: 1rem;
-  }
-
-  .advantage-card p {
-    font-size: 0.9rem;
-  }
-
-  .testimonial-text {
-    font-size: 0.95rem;
-  }
-
-  .testimonial-block cite {
-    font-size: 0.85rem;
-  }
-
-  .cta-button.large {
-    padding: 10px 20px;
-    font-size: 0.8rem;
-    max-width: 100%;
-  }
-
-  .accordion-header {
-    font-size: 0.9rem;
-  }
-
-  .accordion-header::after {
-    font-size: 1.2rem;
-  }
-
-  .container {
-    padding: 0 12px;
   }
 
   .three-in-one-label {
@@ -651,25 +681,87 @@ body {
   }
 
   .three-in-one-label h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 
   .trio-functions {
-    gap: 8px;
-    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .function-item {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 5px 10px;
   }
 
-  .testimonials-section h2 {
-    font-size: 1.3rem;
+  .three-system-section,
+  .why-section,
+  .benefits-section,
+  .trust-section,
+  .final-cta-section,
+  .faq-section {
+    padding: 40px 16px;
   }
 
-  .final-cta-section p {
-    font-size: 0.95rem;
+  .three-system-section h2,
+  .why-content h2,
+  .trust-section h2,
+  .final-cta-section h2,
+  .faq-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .system-card {
+    padding: 25px 16px;
+  }
+
+  .system-number {
+    font-size: 2.2rem;
+  }
+
+  .system-card h3 {
+    font-size: 1rem;
+  }
+
+  .system-card p,
+  .why-content p,
+  .benefit-item p,
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .benefit-item {
+    padding: 20px 16px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .final-new-price {
+    font-size: 2rem;
+  }
+
+  .final-pricing {
+    margin-bottom: 20px;
+  }
+
+  .cta-button.large {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .accordion-header {
+    font-size: 0.9rem;
+  }
+
+  .accordion-content {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 0 12px;
   }
 }
 
@@ -680,15 +772,6 @@ body {
   }
   to {
     transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
     opacity: 1;
   }
 }
