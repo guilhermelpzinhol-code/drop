@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   setTimeout(() => updateStockCount(7), 60000)
 })
 
-// Script para o efeito de Scroll-Reveal
+// Scroll-Reveal effect
 function reveal() {
   var reveals = document.querySelectorAll(".reveal")
 
@@ -33,7 +33,7 @@ function reveal() {
 window.addEventListener("scroll", reveal)
 reveal()
 
-// Script do Acordeão (FAQ)
+// FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
   const accordionHeaders = document.querySelectorAll(".accordion-header")
 
