@@ -49,10 +49,14 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
+.navbar .logo {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -1px;
+}
+
+.navbar .cta-button.small {
+  margin-left: auto;
 }
 
 .highlight {
@@ -1891,6 +1895,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
