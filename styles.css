@@ -507,6 +507,7 @@ body {
   max-width: 500px;
   position: relative;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .showcase-slider {
@@ -538,40 +539,9 @@ body {
   filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.2));
 }
 
-/* Botões de Navegação */
+/* Botões de Navegação - OCULTOS */
 .showcase-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(212, 175, 55, 0.9);
-  color: #1a1410;
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  font-size: 1.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-}
-
-.showcase-nav:hover {
-  background: #f4d03f;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-}
-
-.showcase-nav.prev {
-  left: 10px;
-}
-
-.showcase-nav.next {
-  right: 10px;
+  display: none;
 }
 
 /* Indicadores */
@@ -603,59 +573,33 @@ body {
   background: rgba(212, 175, 55, 0.6);
 }
 
-/* Thumbnails */
-.showcase-thumbnails {
+/* Mensagem de Swipe */
+.swipe-hint {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: rgba(212, 175, 55, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.5px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 8px;
 }
 
-.thumbnail {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 3px solid rgba(212, 175, 55, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0.6;
+.swipe-hint::before {
+  content: '←';
+  font-size: 1.2rem;
 }
 
-.thumbnail:hover {
-  opacity: 0.9;
-  border-color: rgba(212, 175, 55, 0.6);
-  transform: scale(1.05);
+.swipe-hint::after {
+  content: '→';
+  font-size: 1.2rem;
 }
 
-.thumbnail.active {
-  border-color: #d4af37;
-  opacity: 1;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.luxury-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-  color: #1a1410;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-  z-index: 11;
+/* Thumbnails - OCULTOS */
+.showcase-thumbnails {
+  display: none;
 }
 
 /* Conteúdo de Texto */
@@ -1846,6 +1790,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
