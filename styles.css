@@ -1042,6 +1042,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .new-launch-badge {
@@ -1063,7 +1064,6 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  text-align: center;
 }
 
 .new-launch-showcase {
@@ -1071,6 +1071,9 @@ body {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .launch-slider {
@@ -1118,6 +1121,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .launch-nav {
@@ -1162,6 +1166,7 @@ body {
   gap: 12px;
   margin-top: 20px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .launch-thumb {
@@ -1199,6 +1204,10 @@ body {
 .new-launch-text {
   color: #1a1a1a;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .launch-title {
@@ -1207,6 +1216,7 @@ body {
   margin-bottom: 10px;
   color: #e91e63;
   line-height: 1.2;
+  text-align: center;
 }
 
 .launch-subtitle {
@@ -1214,6 +1224,7 @@ body {
   font-weight: 600;
   color: #c2185b;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .launch-description {
@@ -1221,6 +1232,7 @@ body {
   line-height: 1.8;
   color: #424242;
   margin-bottom: 35px;
+  text-align: center;
 }
 
 .launch-pricing {
@@ -1231,6 +1243,8 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(233, 30, 99, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 .launch-price-row {
@@ -1279,6 +1293,7 @@ body {
   letter-spacing: 0.5px;
   box-shadow: 0 8px 30px rgba(233, 30, 99, 0.4);
   transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 .launch-cta-button:hover {
@@ -1298,7 +1313,6 @@ body {
   .new-launch-content {
     grid-template-columns: 1fr;
     gap: 40px;
-    text-align: center;
   }
   
   .new-launch-showcase {
@@ -1322,6 +1336,7 @@ body {
   
   .launch-description {
     font-size: 0.95rem;
+    padding: 0 10px;
   }
   
   .launch-new-price {
@@ -1344,10 +1359,14 @@ body {
   }
   
   .launch-cta-button {
-    margin: 0 auto;
     display: block;
     width: 90%;
     max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .launch-pricing {
+    max-width: 90%;
   }
 }
 
@@ -1358,6 +1377,11 @@ body {
   
   .launch-title {
     font-size: 1.7rem;
+  }
+  
+  .launch-description {
+    font-size: 0.9rem;
+    padding: 0 5px;
   }
   
   .launch-new-price {
@@ -1381,6 +1405,11 @@ body {
     width: 95%;
     padding: 14px 30px;
     font-size: 0.95rem;
+  }
+  
+  .launch-pricing {
+    max-width: 95%;
+    padding: 20px 15px;
   }
 }
 /* Trust Section */
@@ -1995,6 +2024,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
