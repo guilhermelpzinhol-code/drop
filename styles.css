@@ -116,7 +116,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .hero-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -154,6 +153,14 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-white);
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
 .hero-image img {
   width: 100%;
   height: auto;
@@ -165,7 +172,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .hero-image-container {
   width: 100%;
   display: flex;
@@ -173,14 +179,12 @@ body {
   align-items: center;
   gap: 25px;
 }
-
 .hero-image-container img {
   max-width: 100%;
   height: auto;
   max-height: 450px;
   object-fit: contain;
 }
-
 .three-in-one-label {
   width: 100%;
   text-align: center;
@@ -1790,6 +1794,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
