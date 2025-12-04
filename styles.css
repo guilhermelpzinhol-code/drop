@@ -40,29 +40,30 @@ body {
 .navbar {
   background-color: var(--primary-black);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 16px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 20px;
 }
 
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -1px;
+  margin-right: auto;
 }
 
 .navbar .cta-button.small {
-  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .highlight {
   color: var(--accent-yellow);
 }
-
 /* CTA Buttons */
 .cta-button {
   padding: 12px 24px;
@@ -88,7 +89,9 @@ body {
 .cta-button.small {
   padding: 8px 16px;
   font-size: 0.75rem;
-  margin-left: auto;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
 }
 
 .cta-button.large {
@@ -1895,6 +1898,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
