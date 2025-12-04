@@ -140,6 +140,26 @@ body {
   text-align: center;
   width: 100%;
 }
+
+/* NOVO - Headline com palavras empilhadas */
+.hero-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 30px;
+}
+
+.hero-headline .word {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  display: block;
+  color: var(--text-white);
+}
+
+/* MODIFICADO - Para compatibilidade com código antigo */
 .hero-text h1 {
   font-size: 4.5rem !important;
   font-weight: 800;
@@ -147,15 +167,33 @@ body {
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
+
 .text-gradient {
   color: var(--accent-yellow);
 }
+
 .hero-sub {
   font-size: 1.1rem;
   color: var(--text-gray);
   line-height: 1.7;
   margin-bottom: 30px;
+  max-width: 600px;
 }
+
+/* NOVO - Animação de reveal para palavras */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealWord 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes revealWord {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-image {
   width: 100%;
   max-width: 550px;
@@ -252,6 +290,12 @@ body {
     font-size: 2.2rem !important;
   }
   
+  /* NOVO - Tamanho responsivo das palavras */
+  .hero-headline .word {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+  
   .hero-image {
     max-width: 90%;
   }
@@ -270,6 +314,18 @@ body {
   
   .cta-button {
     width: 95%;
+  }
+}
+
+/* NOVO - Mobile menor */
+@media (max-width: 480px) {
+  .hero-headline .word {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+  }
+  
+  .hero-sub {
+    font-size: 0.95rem;
   }
 }
 .three-in-one-label {
@@ -1898,6 +1954,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
