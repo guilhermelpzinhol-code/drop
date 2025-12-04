@@ -80,7 +80,7 @@
     </div>
 </section>
     
-   <!-- ========================================
+  <!-- ========================================
      LIMITED EDITION GOLD PRODUCT SECTION
      Seção exclusiva para Doona+ Limited Edition Gold
      ======================================== -->
@@ -95,13 +95,64 @@
         <div class="limited-content">
             <div class="limited-image-wrapper">
                 <div class="glow-effect"></div>
-                <img src="https://i.imgur.com/UDygMIe.png" alt="Doona+ Limited Edition Gold" class="limited-product-image">
+                
+                <!-- Vitrine Digital com Carrossel -->
+                <div class="product-showcase">
+                    <div class="showcase-slider">
+                        <div class="showcase-track">
+                            <div class="showcase-slide active">
+                                <img src="https://i.imgur.com/dXvHqlG.png" alt="Doona+ Gold - View 1">
+                            </div>
+                            <div class="showcase-slide">
+                                <img src="https://i.imgur.com/yYZrifo.png" alt="Doona+ Gold - View 2">
+                            </div>
+                            <div class="showcase-slide">
+                                <img src="https://i.imgur.com/X5u65cX.png" alt="Doona+ Gold - View 3">
+                            </div>
+                        </div>
+                        
+                        <!-- Navegação -->
+                        <button class="showcase-nav prev" aria-label="Previous">‹</button>
+                        <button class="showcase-nav next" aria-label="Next">›</button>
+                    </div>
+                    
+                    <!-- Indicadores -->
+                    <div class="showcase-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                    </div>
+                    
+                    <!-- Thumbnails -->
+                    <div class="showcase-thumbnails">
+                        <button class="thumbnail active" data-slide="0">
+                            <img src="https://i.imgur.com/dXvHqlG.png" alt="View 1">
+                        </button>
+                        <button class="thumbnail" data-slide="1">
+                            <img src="https://i.imgur.com/yYZrifo.png" alt="View 2">
+                        </button>
+                        <button class="thumbnail" data-slide="2">
+                            <img src="https://i.imgur.com/X5u65cX.png" alt="View 3">
+                        </button>
+                    </div>
+                </div>
+                
                 <div class="luxury-badge">GOLD EDITION</div>
             </div>
             
             <div class="limited-text-content">
                 <h2 class="limited-title">Doona+ Limited Edition Gold</h2>
                 <p class="limited-description">Elevate your journey with the pinnacle of luxury. Hand-finished gold accents meet uncompromising safety. A statement piece for families who demand extraordinary.</p>
+                
+                <!-- Preço movido para antes das features -->
+                <div class="limited-pricing">
+                    <div class="price-row">
+                        <span class="limited-old-price">£399</span>
+                        <span class="limited-new-price">£59</span>
+                        <span class="savings-badge">SAVE £340</span>
+                    </div>
+                    <p class="price-note">85% Off • While Stocks Last</p>
+                </div>
                 
                 <div class="limited-features">
                     <div class="feature-item">
@@ -118,15 +169,6 @@
                     </div>
                 </div>
                 
-                <div class="limited-pricing">
-                    <div class="price-row">
-                        <span class="limited-old-price">£399</span>
-                        <span class="limited-new-price">£59</span>
-                        <span class="savings-badge">SAVE £340</span>
-                    </div>
-                    <p class="price-note">85% Off • While Stocks Last</p>
-                </div>
-                
                 <a href="https://doona.shop/products/doona-infant-car-seat-limited-edition-gold" class="luxury-cta-button">
                     Claim Your Limited Edition
                     <span class="button-shine"></span>
@@ -137,6 +179,78 @@
         </div>
     </div>
 </section>
+
+<script>
+// Carrossel da Vitrine Digital
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.showcase-track');
+    const slides = document.querySelectorAll('.showcase-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const prevBtn = document.querySelector('.showcase-nav.prev');
+    const nextBtn = document.querySelector('.showcase-nav.next');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    function updateSlide(index) {
+        // Garantir que o índice está no range
+        currentSlide = (index + totalSlides) % totalSlides;
+        
+        // Mover o track
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Atualizar classes ativas
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentSlide);
+        });
+        
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === currentSlide);
+        });
+        
+        thumbnails.forEach((thumbnail, i) => {
+            thumbnail.classList.toggle('active', i === currentSlide);
+        });
+    }
+    
+    // Navegação por botões
+    prevBtn.addEventListener('click', () => updateSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => updateSlide(currentSlide + 1));
+    
+    // Navegação por indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => updateSlide(index));
+    });
+    
+    // Navegação por thumbnails
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => updateSlide(index));
+    });
+    
+    // Suporte para swipe em mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchStartX - touchEndX > swipeThreshold) {
+            updateSlide(currentSlide + 1);
+        } else if (touchEndX - touchStartX > swipeThreshold) {
+            updateSlide(currentSlide - 1);
+        }
+    }
+});
+</script>
     <!-- Why Section -->
     <section class="why-section">
         <div class="container">
@@ -347,6 +461,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
