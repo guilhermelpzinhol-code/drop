@@ -1290,21 +1290,14 @@ body {
   text-align: center;
 }
 
-@media (max-width: 968px) {
-  .new-launch-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .new-launch-showcase {
-    order: -1;
-    padding: 0 20px;
-  }
-}
-
 @media (max-width: 768px) {
   .new-launch-section {
     padding: 60px 20px;
+  }
+  
+  .new-launch-section .container {
+    max-width: 100%;
+    padding: 0 20px;
   }
   
   .new-launch-badge {
@@ -1315,47 +1308,66 @@ body {
   
   .new-launch-showcase {
     max-width: 100%;
-    padding: 0;
+    padding: 0 10px;
   }
   
   .launch-slider {
-    max-width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
     border-radius: 16px;
   }
   
   .launch-slide {
-    padding: 20px 10px 15px;
+    padding: 20px 15px 15px;
   }
   
   .launch-slide img {
-    max-width: 280px;
-    max-height: 280px;
-    width: 100%;
-    height: auto;
+    max-width: 320px;
+    max-height: 320px;
+    width: 90%;
     margin: 0 auto;
-    display: block;
   }
   
   .slide-caption {
     font-size: 0.85rem;
-    padding: 0 10px;
+    padding: 0 15px;
     margin-top: 10px;
+  }
+  
+  .new-launch-text {
+    padding: 0 15px;
   }
   
   .launch-title {
     font-size: 2rem;
+    padding: 0 10px;
   }
   
   .launch-subtitle {
     font-size: 1.05rem;
+    padding: 0 10px;
   }
   
   .launch-description {
     font-size: 0.95rem;
+    padding: 0 15px;
+    max-width: 500px;
+    margin: 0 auto 35px;
+  }
+  
+  .launch-pricing {
+    max-width: 90%;
+    margin: 0 auto 30px;
   }
   
   .launch-new-price {
     font-size: 2.5rem;
+  }
+  
+  .launch-thumbnails {
+    padding: 0 10px;
+    max-width: 100%;
+    overflow-x: auto;
   }
   
   .launch-thumb {
@@ -1370,12 +1382,14 @@ body {
   }
   
   .launch-cta-button {
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
   }
   
-  .launch-pricing {
-    max-width: 100%;
+  .launch-guarantee {
+    padding: 0 20px;
   }
 }
 
@@ -1384,19 +1398,18 @@ body {
     padding: 40px 16px;
   }
   
-  .new-launch-badge {
-    font-size: 0.7rem;
-    padding: 6px 20px;
-    margin-bottom: 25px;
+  .new-launch-section .container {
+    padding: 0 16px;
   }
   
-  .launch-slide {
-    padding: 15px 5px 10px;
+  .launch-slider {
+    max-width: 100%;
   }
   
   .launch-slide img {
-    max-width: 240px;
-    max-height: 240px;
+    max-width: 280px;
+    max-height: 280px;
+    width: 85%;
   }
   
   .launch-title {
@@ -1411,28 +1424,17 @@ body {
     font-size: 0.9rem;
   }
   
+  .launch-pricing {
+    max-width: 95%;
+    padding: 20px 15px;
+  }
+  
   .launch-new-price {
     font-size: 2.2rem;
   }
   
-  .launch-thumb {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .launch-thumbnails {
-    gap: 8px;
-  }
-  
-  .slide-caption {
-    font-size: 0.8rem;
-  }
-  
-  .launch-pricing {
-    padding: 20px 15px;
-  }
-  
   .launch-cta-button {
+    width: 95%;
     padding: 14px 30px;
     font-size: 0.95rem;
   }
@@ -2049,6 +2051,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
