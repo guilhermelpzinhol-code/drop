@@ -1290,14 +1290,38 @@ body {
   text-align: center;
 }
 
+/* Ajustes Mobile para New Launch Section */
 @media (max-width: 968px) {
   .new-launch-content {
     grid-template-columns: 1fr;
     gap: 40px;
+    text-align: center;
   }
   
   .new-launch-showcase {
     order: -1;
+    margin: 0 auto;
+  }
+  
+  .new-launch-text {
+    text-align: center;
+  }
+  
+  .launch-pricing {
+    margin: 0 auto 30px;
+    max-width: 450px;
+  }
+  
+  .launch-price-row {
+    justify-content: center;
+  }
+  
+  .launch-cta-button {
+    margin: 0 auto;
+  }
+  
+  .launch-guarantee {
+    text-align: center;
   }
 }
 
@@ -1312,16 +1336,31 @@ body {
     margin-bottom: 35px;
   }
   
+  .new-launch-showcase {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .launch-slider {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
   .launch-title {
     font-size: 2rem;
+    text-align: center;
   }
   
   .launch-subtitle {
     font-size: 1.05rem;
+    text-align: center;
   }
   
   .launch-description {
     font-size: 0.95rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 35px;
   }
   
   .launch-new-price {
@@ -1329,7 +1368,8 @@ body {
   }
   
   .launch-slide img {
-    max-width: 300px;
+    max-width: 350px;
+    margin: 0 auto;
   }
   
   .launch-thumb {
@@ -1345,21 +1385,42 @@ body {
   
   .launch-cta-button {
     width: 100%;
+    max-width: 400px;
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .new-launch-section {
+    padding: 50px 15px;
+  }
+  
+  .launch-slider {
+    max-width: 100%;
+  }
+  
   .launch-title {
     font-size: 1.7rem;
+  }
+  
+  .launch-subtitle {
+    font-size: 1rem;
+  }
+  
+  .launch-description {
+    font-size: 0.9rem;
   }
   
   .launch-new-price {
     font-size: 2.2rem;
   }
   
+  .launch-slide {
+    padding: 20px 10px 15px;
+  }
+  
   .launch-slide img {
-    max-width: 250px;
+    max-width: 280px;
   }
   
   .launch-thumb {
@@ -1369,10 +1430,40 @@ body {
   
   .launch-thumbnails {
     gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .slide-caption {
     font-size: 0.85rem;
+    padding: 0 10px;
+    min-height: 35px;
+  }
+  
+  .launch-pricing {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  .launch-price-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .launch-slide img {
+    max-width: 240px;
+  }
+  
+  .launch-thumb {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .slide-caption {
+    font-size: 0.8rem;
   }
 }
 /* Trust Section */
@@ -1987,6 +2078,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
