@@ -1107,12 +1107,16 @@ body {
 }
 
 .slide-caption {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #e91e63;
   text-align: center;
-  margin: 0;
-  padding: 0 20px;
+  margin: 10px 0 0 0;
+  padding: 0 15px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .launch-nav {
@@ -1983,6 +1987,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
