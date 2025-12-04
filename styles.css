@@ -1043,6 +1043,7 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
+  padding: 0 20px;
 }
 
 .new-launch-badge {
@@ -1055,7 +1056,7 @@ body {
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
   box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
 }
 
@@ -1064,6 +1065,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  justify-items: center;
 }
 
 .new-launch-showcase {
@@ -1071,9 +1073,6 @@ body {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .launch-slider {
@@ -1115,7 +1114,7 @@ body {
   font-weight: 600;
   color: #e91e63;
   text-align: center;
-  margin: 10px 0 0 0;
+  margin: 10px auto 0;
   padding: 0 15px;
   min-height: 40px;
   display: flex;
@@ -1164,7 +1163,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 20px;
+  margin: 20px auto 0;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -1204,16 +1203,15 @@ body {
 .new-launch-text {
   color: #1a1a1a;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .launch-title {
   font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   color: #e91e63;
   line-height: 1.2;
   text-align: center;
@@ -1223,7 +1221,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   color: #c2185b;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   text-align: center;
 }
 
@@ -1231,8 +1229,9 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #424242;
-  margin-bottom: 35px;
+  margin: 0 auto 35px;
   text-align: center;
+  max-width: 550px;
 }
 
 .launch-pricing {
@@ -1281,7 +1280,7 @@ body {
 }
 
 .launch-cta-button {
-  display: inline-block;
+  display: block;
   padding: 18px 50px;
   background: #e91e63;
   color: #ffffff;
@@ -1294,6 +1293,7 @@ body {
   box-shadow: 0 8px 30px rgba(233, 30, 99, 0.4);
   transition: all 0.3s ease;
   margin: 0 auto;
+  max-width: 400px;
 }
 
 .launch-cta-button:hover {
@@ -1325,6 +1325,10 @@ body {
     padding: 60px 20px;
   }
   
+  .new-launch-section .container {
+    padding: 0 20px;
+  }
+  
   .new-launch-badge {
     font-size: 0.75rem;
     margin-bottom: 35px;
@@ -1336,6 +1340,7 @@ body {
   
   .launch-description {
     font-size: 0.95rem;
+    max-width: 100%;
     padding: 0 10px;
   }
   
@@ -1359,20 +1364,23 @@ body {
   }
   
   .launch-cta-button {
-    display: block;
     width: 90%;
     max-width: 400px;
-    margin: 0 auto;
   }
   
   .launch-pricing {
-    max-width: 90%;
+    width: 90%;
+    max-width: 450px;
   }
 }
 
 @media (max-width: 480px) {
   .new-launch-section {
     padding: 40px 16px;
+  }
+  
+  .new-launch-section .container {
+    padding: 0 16px;
   }
   
   .launch-title {
@@ -1408,7 +1416,7 @@ body {
   }
   
   .launch-pricing {
-    max-width: 95%;
+    width: 95%;
     padding: 20px 15px;
   }
 }
@@ -2024,6 +2032,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
