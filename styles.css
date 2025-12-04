@@ -84,6 +84,7 @@ body {
 .cta-button.small {
   padding: 8px 16px;
   font-size: 0.75rem;
+  margin-left: auto;
 }
 
 .cta-button.large {
@@ -1890,6 +1891,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
