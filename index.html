@@ -86,11 +86,11 @@
      ======================================== -->
 <section class="limited-edition-section">
     <div class="container">
-        <div class="limited-badge">
+        <div class="limited-badge reveal">
             <span>EXCLUSIVE LIMITED EDITION</span>
         </div>
         
-        <div class="limited-content">
+        <div class="limited-content reveal">
             <div class="limited-image-wrapper">
                 <div class="glow-effect"></div>
                 
@@ -178,83 +178,12 @@
     </div>
 </section>
 
-<script>
-// Carrossel da Vitrine Digital
-document.addEventListener('DOMContentLoaded', function() {
-    const track = document.querySelector('.showcase-track');
-    const slides = document.querySelectorAll('.showcase-slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const prevBtn = document.querySelector('.showcase-nav.prev');
-    const nextBtn = document.querySelector('.showcase-nav.next');
-    
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    
-    function updateSlide(index) {
-        // Garantir que o índice está no range
-        currentSlide = (index + totalSlides) % totalSlides;
-        
-        // Mover o track
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // Atualizar classes ativas
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === currentSlide);
-        });
-        
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === currentSlide);
-        });
-        
-        thumbnails.forEach((thumbnail, i) => {
-            thumbnail.classList.toggle('active', i === currentSlide);
-        });
-    }
-    
-    // Navegação por botões
-    prevBtn.addEventListener('click', () => updateSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => updateSlide(currentSlide + 1));
-    
-    // Navegação por indicadores
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => updateSlide(index));
-    });
-    
-    // Navegação por thumbnails
-    thumbnails.forEach((thumbnail, index) => {
-        thumbnail.addEventListener('click', () => updateSlide(index));
-    });
-    
-    // Suporte para swipe em mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-    
-    track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        if (touchStartX - touchEndX > swipeThreshold) {
-            updateSlide(currentSlide + 1);
-        } else if (touchEndX - touchStartX > swipeThreshold) {
-            updateSlide(currentSlide - 1);
-        }
-    }
-});
-</script>
-    <!-- COLOR VARIATIONS SECTIONS -->
+<!-- COLOR VARIATIONS SECTIONS -->
 
 <!-- Desert Green -->
 <section class="color-variation-section desert-green-bg">
     <div class="container">
-        <div class="color-variation-content">
+        <div class="color-variation-content reveal">
             <div class="color-image">
                 <img src="https://i.imgur.com/cYj8jgS.png" alt="Doona+ Desert Green">
             </div>
@@ -274,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Flame Red -->
 <section class="color-variation-section flame-red-bg">
     <div class="container">
-        <div class="color-variation-content reverse">
+        <div class="color-variation-content reverse reveal">
             <div class="color-image">
                 <img src="https://i.imgur.com/tFjGIv6.png" alt="Doona+ Flame Red">
             </div>
@@ -294,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Racing Green -->
 <section class="color-variation-section racing-green-bg">
     <div class="container">
-        <div class="color-variation-content">
+        <div class="color-variation-content reveal">
             <div class="color-image">
                 <img src="https://i.imgur.com/5muvTgR.png" alt="Doona+ Racing Green">
             </div>
@@ -314,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Slate Green -->
 <section class="color-variation-section slate-green-bg">
     <div class="container">
-        <div class="color-variation-content reverse">
+        <div class="color-variation-content reverse reveal">
             <div class="color-image">
                 <img src="https://i.imgur.com/fW54lmG.png" alt="Doona+ Slate Green">
             </div>
@@ -334,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Blush Pink -->
 <section class="color-variation-section blush-pink-bg">
     <div class="container">
-        <div class="color-variation-content">
+        <div class="color-variation-content reveal">
             <div class="color-image">
                 <img src="https://i.imgur.com/vewSFUc.png" alt="Doona+ Blush Pink">
             </div>
@@ -623,6 +552,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
 
 
 
