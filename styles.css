@@ -1309,14 +1309,25 @@ body {
   text-align: center;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
+  .new-launch-section {
+    padding: 60px 20px;
+  }
+  
   .new-launch-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
   }
   
   .new-launch-showcase {
-    order: -1;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .new-launch-text {
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
@@ -2032,6 +2043,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
