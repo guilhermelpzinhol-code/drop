@@ -1290,9 +1290,6 @@ body {
   text-align: center;
 }
 
-/* Ajustes Mobile para New Launch Section */
-/* NEW LAUNCH SECTION - Ajustes Mobile Corrigidos */
-
 @media (max-width: 968px) {
   .new-launch-content {
     grid-template-columns: 1fr;
@@ -1301,6 +1298,7 @@ body {
   
   .new-launch-showcase {
     order: -1;
+    padding: 0 20px;
   }
 }
 
@@ -1317,11 +1315,31 @@ body {
   
   .new-launch-showcase {
     max-width: 100%;
+    padding: 0;
   }
   
   .launch-slider {
     max-width: 100%;
     border-radius: 16px;
+  }
+  
+  .launch-slide {
+    padding: 20px 10px 15px;
+  }
+  
+  .launch-slide img {
+    max-width: 280px;
+    max-height: 280px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .slide-caption {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    margin-top: 10px;
   }
   
   .launch-title {
@@ -1338,15 +1356,6 @@ body {
   
   .launch-new-price {
     font-size: 2.5rem;
-  }
-  
-  .launch-slide {
-    padding: 20px 15px 15px;
-  }
-  
-  .launch-slide img {
-    max-width: 100%;
-    height: auto;
   }
   
   .launch-thumb {
@@ -1381,6 +1390,15 @@ body {
     margin-bottom: 25px;
   }
   
+  .launch-slide {
+    padding: 15px 5px 10px;
+  }
+  
+  .launch-slide img {
+    max-width: 240px;
+    max-height: 240px;
+  }
+  
   .launch-title {
     font-size: 1.7rem;
   }
@@ -1397,10 +1415,6 @@ body {
     font-size: 2.2rem;
   }
   
-  .launch-slide {
-    padding: 15px 10px 10px;
-  }
-  
   .launch-thumb {
     width: 55px;
     height: 55px;
@@ -1411,8 +1425,7 @@ body {
   }
   
   .slide-caption {
-    font-size: 0.85rem;
-    padding: 0 10px;
+    font-size: 0.8rem;
   }
   
   .launch-pricing {
@@ -2036,6 +2049,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
