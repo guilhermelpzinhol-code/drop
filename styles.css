@@ -513,9 +513,9 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 15px 60px rgba(212, 175, 55, 0.3);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .showcase-track {
@@ -1846,6 +1846,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
