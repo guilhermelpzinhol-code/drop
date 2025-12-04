@@ -154,30 +154,15 @@
                 
                 <div class="limited-features">
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                            </svg>
-                        </div>
+                        <span class="feature-icon">👑</span>
                         <span>Premium Gold Finish</span>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
+                        <span class="feature-icon">💎</span>
                         <span>Limited Production</span>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
+                        <span class="feature-icon">🎖️</span>
                         <span>Collector's Item</span>
                     </div>
                 </div>
@@ -207,9 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalSlides = slides.length;
     
     function updateSlide(index) {
+        // Garantir que o índice está no range
         currentSlide = (index + totalSlides) % totalSlides;
+        
+        // Mover o track
         track.style.transform = `translateX(-${currentSlide * 100}%)`;
         
+        // Atualizar classes ativas
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === currentSlide);
         });
@@ -223,17 +212,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Navegação por botões
     prevBtn.addEventListener('click', () => updateSlide(currentSlide - 1));
     nextBtn.addEventListener('click', () => updateSlide(currentSlide + 1));
     
+    // Navegação por indicadores
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => updateSlide(index));
     });
     
+    // Navegação por thumbnails
     thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', () => updateSlide(index));
     });
     
+    // Suporte para swipe em mobile
     let touchStartX = 0;
     let touchEndX = 0;
     
@@ -609,6 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
 
 
 
