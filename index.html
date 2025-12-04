@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
-    <!-- NEW LAUNCH SECTION - Doona Liki Trike S1 -->
+   <!-- NEW LAUNCH SECTION - Doona Liki Trike S1 -->
 <section class="new-launch-section">
     <div class="container">
         <div class="new-launch-badge">
@@ -410,63 +410,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
-
-<script>
-// Carrossel New Launch
-document.addEventListener('DOMContentLoaded', function() {
-    const launchTrack = document.querySelector('.launch-track');
-    const launchSlides = document.querySelectorAll('.launch-slide');
-    const launchThumbs = document.querySelectorAll('.launch-thumb');
-    const launchPrevBtn = document.querySelector('.new-launch-section .launch-nav.prev');
-    const launchNextBtn = document.querySelector('.new-launch-section .launch-nav.next');
-    
-    let currentLaunchSlide = 0;
-    const totalLaunchSlides = launchSlides.length;
-    
-    function updateLaunchSlide(index) {
-        currentLaunchSlide = (index + totalLaunchSlides) % totalLaunchSlides;
-        
-        launchTrack.style.transform = `translateX(-${currentLaunchSlide * 100}%)`;
-        
-        launchSlides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === currentLaunchSlide);
-        });
-        
-        launchThumbs.forEach((thumb, i) => {
-            thumb.classList.toggle('active', i === currentLaunchSlide);
-        });
-    }
-    
-    launchPrevBtn.addEventListener('click', () => updateLaunchSlide(currentLaunchSlide - 1));
-    launchNextBtn.addEventListener('click', () => updateLaunchSlide(currentLaunchSlide + 1));
-    
-    launchThumbs.forEach((thumb, index) => {
-        thumb.addEventListener('click', () => updateLaunchSlide(index));
-    });
-    
-    // Suporte para swipe em mobile
-    let launchTouchStartX = 0;
-    let launchTouchEndX = 0;
-    
-    launchTrack.addEventListener('touchstart', (e) => {
-        launchTouchStartX = e.touches[0].clientX;
-    });
-    
-    launchTrack.addEventListener('touchend', (e) => {
-        launchTouchEndX = e.changedTouches[0].clientX;
-        handleLaunchSwipe();
-    });
-    
-    function handleLaunchSwipe() {
-        const swipeThreshold = 50;
-        if (launchTouchStartX - launchTouchEndX > swipeThreshold) {
-            updateLaunchSlide(currentLaunchSlide + 1);
-        } else if (launchTouchEndX - launchTouchStartX > swipeThreshold) {
-            updateLaunchSlide(currentLaunchSlide - 1);
-        }
-    }
-});
-</script>
     <!-- Trust Section -->
  <section class="trust-section">
     <div class="container">
@@ -598,6 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
