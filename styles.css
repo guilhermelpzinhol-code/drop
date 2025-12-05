@@ -210,6 +210,67 @@ body {
   max-height: 450px;
   object-fit: contain;
 }
+.three-in-one-label {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: var(--text-white);
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  margin: 0 auto;
+}
+
+.three-in-one-label h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  color: var(--accent-yellow);
+}
+
+.trio-functions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.function-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-white);
+  padding: 12px 30px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 30px;
+  background: rgba(255, 215, 0, 0.08);
+  width: 100%;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.function-item:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .three-in-one-label {
+    padding: 25px 20px;
+  }
+  
+  .three-in-one-label h3 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .function-item {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+}
 .pricing-block {
   width: 100%;
   max-width: 500px;
@@ -1831,6 +1892,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
