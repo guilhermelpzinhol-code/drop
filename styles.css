@@ -1705,14 +1705,6 @@ body {
     padding: 0 16px;
   }
 
-  .three-in-one-label h3 {
-    font-size: 1.5rem;
-  }
-
-  .function-item {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
 
   .cta-button.large {
     max-width: 100%;
@@ -1757,23 +1749,6 @@ body {
     font-size: 0.9rem;
   }
 
-  .three-in-one-label {
-    padding: 16px;
-  }
-
-  .three-in-one-label h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  .trio-functions {
-    gap: 10px;
-  }
-
-  .function-item {
-    font-size: 0.75rem;
-    padding: 5px 10px;
-  }
 
   .three-system-section,
   .why-section,
@@ -1856,6 +1831,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
