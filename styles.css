@@ -154,7 +154,7 @@ body {
 .hero-headline .word {
   font-size: 6rem;
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.85;
   letter-spacing: -3px;
   display: block;
   color: var(--text-white);
@@ -265,8 +265,9 @@ body {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .hero-headline .word {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: -2px;
+    line-height: 0.85;
   }
   
   .hero-image {
@@ -292,8 +293,9 @@ body {
 
 @media (max-width: 480px) {
   .hero-headline .word {
-    font-size: 3rem;
-    letter-spacing: -1px;
+    font-size: 4.5rem;
+    letter-spacing: -1.5px;
+    line-height: 0.8;
   }
   
   .hero-sub {
@@ -1843,6 +1845,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
