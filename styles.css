@@ -152,13 +152,13 @@ body {
 }
 
 .hero-headline .word {
-  font-size: 7rem;
+  font-size: 8.5rem;
   font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -3px;
+  line-height: 0.88;
+  letter-spacing: -4px;
   display: block;
   color: var(--text-white);
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .text-gradient {
@@ -270,10 +270,10 @@ body {
   }
   
   .hero-headline .word {
-    font-size: 5.5rem;
-    letter-spacing: -2.5px;
-    line-height: 0.9;
-    margin-bottom: 12px;
+    font-size: 6.8rem;
+    letter-spacing: -3px;
+    line-height: 0.85;
+    margin-bottom: 15px;
   }
   
   .hero-image {
@@ -299,14 +299,14 @@ body {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 60px 20px 40px;
+    padding: 60px 16px 40px;
   }
   
   .hero-headline .word {
-    font-size: 4.8rem;
-    letter-spacing: -2px;
-    line-height: 0.85;
-    margin-bottom: 10px;
+    font-size: 5.8rem;
+    letter-spacing: -2.5px;
+    line-height: 0.82;
+    margin-bottom: 12px;
   }
   
   .hero-sub {
@@ -1856,6 +1856,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
