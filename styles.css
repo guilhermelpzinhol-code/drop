@@ -38,6 +38,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  position: relative;
+  z-index: 1001;
 }
 
 .urgency-icon {
@@ -1924,6 +1926,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
