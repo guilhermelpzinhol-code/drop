@@ -53,11 +53,33 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 16px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   gap: 20px;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  top: 12px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  border-radius: 50px;
+  border-bottom: none;
+  padding: 10px 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeInNav 0.4s ease forwards;
+}
+
+@keyframes fadeInNav {
+  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 .navbar .logo {
@@ -1902,6 +1924,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
