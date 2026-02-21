@@ -862,24 +862,40 @@ body {
 .limited-features {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0;
   margin-bottom: 35px;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-  padding: 12px 20px;
-  background: rgba(212, 175, 55, 0.08);
-  border-left: 3px solid #d4af37;
-  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  background: transparent;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover {
+  color: #d4af37;
 }
 
 .feature-icon {
-  font-size: 1.3rem;
+  width: 18px;
+  height: 18px;
+  color: #d4af37;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Botão Luxuoso */
@@ -1964,6 +1980,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
