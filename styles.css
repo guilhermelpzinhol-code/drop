@@ -50,11 +50,9 @@ body {
 }
 
 .stock-number {
-  background-color: var(--primary-black);
-  color: var(--accent-yellow);
-  padding: 2px 8px;
-  border-radius: 4px;
+  color: var(--primary-black);
   font-size: 1rem;
+  text-decoration: underline;
 }
 
 @keyframes shimmer {
@@ -1917,6 +1915,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
