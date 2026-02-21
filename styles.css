@@ -26,23 +26,24 @@ body {
 }
 
 .urgency-bar {
-  background: linear-gradient(90deg, #f5a700, var(--accent-yellow), #f5a700);
-  background-size: 200% auto;
+  background-color: var(--accent-yellow);
   color: var(--primary-black);
   text-align: center;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  animation: slideDown 0.5s ease-out, shimmer 2.5s linear infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  gap: 8px;
+}
+
+.urgency-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 /* Navigation */
@@ -1901,6 +1902,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
