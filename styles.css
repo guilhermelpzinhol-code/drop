@@ -365,35 +365,68 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  .hero {
-    padding: 80px 20px 60px;
+  .limited-edition-section {
+    padding: 60px 20px;
   }
-  
-  .hero-headline .word {
-    font-size: 6.8rem;
-    letter-spacing: -3px;
-    line-height: 0.85;
-    margin-bottom: 15px;
+
+  .limited-text-content {
+    text-align: center;
   }
-  
-  .hero-image {
-    max-width: 90%;
+
+  .limited-title {
+    font-size: 2rem;
+    text-align: center;
   }
-  
-  .hero-image img {
-    max-height: 350px;
+
+  .limited-description {
+    font-size: 0.95rem;
+    text-align: center;
   }
-  
-  .new-price {
-    font-size: 3rem;
+
+  .limited-badge {
+    font-size: 0.75rem;
+    margin-bottom: 35px;
   }
-  
-  .old-price {
-    font-size: 1.3rem;
+
+  .limited-new-price {
+    font-size: 2.5rem;
   }
-  
-  .cta-button {
-    width: 95%;
+
+  .price-row {
+    justify-content: center;
+  }
+
+  .limited-pricing {
+    text-align: center;
+  }
+
+  .price-note {
+    text-align: center;
+  }
+
+  .feature-item {
+    justify-content: center;
+    border-left: none;
+    border-top: 3px solid #d4af37;
+    text-align: center;
+  }
+
+  .luxury-cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .limited-guarantee {
+    text-align: center;
+  }
+
+  .product-showcase {
+    max-width: 350px;
+  }
+
+  .glow-effect {
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -1931,6 +1964,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
