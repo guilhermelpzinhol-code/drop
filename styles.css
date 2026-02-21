@@ -75,20 +75,30 @@ body {
   text-align: center;
   padding: 10px 20px;
   font-weight: 800;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 56px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .urgency-icon {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .urgency-bar {
+    font-size: 0.72rem;
+    padding: 10px 12px;
+    gap: 5px;
+  }
 }
 /* CTA Buttons */
 .cta-button {
@@ -1918,6 +1928,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
