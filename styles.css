@@ -1272,6 +1272,7 @@ body {
   font-weight: 800;
   margin-bottom: 20px;
   color: var(--text-white);
+  text-align: center;
 }
 
 .why-content p {
@@ -1980,6 +1981,7 @@ body {
     opacity: 1;
   }
 }
+
 
 
 
